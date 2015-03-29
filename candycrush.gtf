@@ -1,0 +1,998 @@
+{
+	"garglSchemaVersion": "1.0",
+	"moduleVersion": "1.0",
+	"moduleName": "CandyCrush",
+	"moduleDescription": "Integrate into the Candy Crush Saga game (https://apps.facebook.com/candycrush/)",
+	"functions": [
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/candycrushapi/getGameModes",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "283598",
+			"functionName": "GetGameModes",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/candycrushapi/getGameModePerLevel",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "283611",
+			"functionName": "GetGameModesPerLevel",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/candycrushapi/getCandyProperties",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "283688",
+			"functionName": "GetCandyProperties",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/gameInitLight",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "283718",
+			"functionName": "GetGameInitInfo",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/gameStart2",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "arg0",
+						"value": "@episodeNumber@"
+					},
+					{
+						"description": "",
+						"name": "arg1",
+						"value": "@levelNumber@"
+					},
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					},
+					{
+						"description": "",
+						"name": "arg2",
+						"value": "@seed@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "284058",
+			"functionName": "StartGame",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/trackGameSummary2",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "arg2",
+						"value": "@episodeNumberCommaLevelNumber@"
+					},
+					{
+						"description": "",
+						"name": "arg6",
+						"value": "-180"
+					},
+					{
+						"description": "",
+						"name": "arg7",
+						"value": "1088126"
+					},
+					{
+						"description": "",
+						"name": "arg4",
+						"value": "0"
+					},
+					{
+						"description": "",
+						"name": "arg3",
+						"value": "0"
+					},
+					{
+						"description": "",
+						"name": "arg5",
+						"value": "0"
+					},
+					{
+						"description": "",
+						"name": "arg0",
+						"value": "1426834295554"
+					},
+					{
+						"description": "",
+						"name": "arg8",
+						"value": "-1"
+					},
+					{
+						"description": "",
+						"name": "arg1",
+						"value": "1426834654438"
+					},
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "284366",
+			"functionName": "GetTrackGameSummary",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/gameEnd3",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					},
+					{
+						"description": "",
+						"name": "arg0",
+						"value": "@data@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "284405",
+			"functionName": "EndGame",
+			"functionDescription": "data param is in format: {\"score\":480,\"movesMade\":6,\"seed\":1426834295554,\"levelId\":1,\"timeLeftPercent\":-1,\"variant\":0,\"cs\":\"0d48f6\",\"reason\":0,\"movesLeft\":0,\"episodeId\":1,\"movesInit\":6}"
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/getLevelToplist",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "arg0",
+						"value": "@episodeNumber@"
+					},
+					{
+						"description": "",
+						"name": "arg1",
+						"value": "@levelNumber@"
+					},
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "284431",
+			"functionName": "GetLevelTopList",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/getEpisodeChampions",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					},
+					{
+						"description": "",
+						"name": "arg0",
+						"value": "@episodeInSquareBrackets@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "284555",
+			"functionName": "GetEpisodeChampions",
+			"functionDescription": ""
+		},
+		{
+			"request": {
+				"method": "GET",
+				"url": "https://candycrush.king.com/api/poll",
+				"httpVersion": "HTTP/1.1",
+				"headers": [
+					{
+						"description": "",
+						"name": "Accept-Encoding",
+						"value": "gzip, deflate, sdch"
+					},
+					{
+						"description": "",
+						"name": "Host",
+						"value": "candycrush.king.com"
+					},
+					{
+						"description": "",
+						"name": "Accept-Language",
+						"value": "en-US,en;q=0.8"
+					},
+					{
+						"description": "",
+						"name": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36"
+					},
+					{
+						"description": "",
+						"name": "Accept",
+						"value": "*/*"
+					},
+					{
+						"description": "",
+						"name": "Referer",
+						"value": "https://candycrush.king.com/FacebookServlet/"
+					},
+					{
+						"description": "",
+						"name": "X-Requested-With",
+						"value": "ShockwaveFlash/17.0.0.134"
+					},
+					{
+						"description": "",
+						"name": "Connection",
+						"value": "keep-alive"
+					}
+				],
+				"queryString": [
+					{
+						"description": "",
+						"name": "_session",
+						"value": "@sessionID@"
+					}
+				]
+			},
+			"response": {
+				"headers": [
+					{
+						"name": "Pragma"
+					},
+					{
+						"name": "Content-Encoding"
+					},
+					{
+						"name": "Vary"
+					},
+					{
+						"name": "P3P"
+					},
+					{
+						"name": "Cache-Control"
+					},
+					{
+						"name": "Connection"
+					},
+					{
+						"name": "Content-Type"
+					},
+					{
+						"name": "Content-Length"
+					},
+					{
+						"name": "Expires"
+					}
+				],
+				"fields": []
+			},
+			"connection": "285190",
+			"functionName": "PollUserInfo",
+			"functionDescription": ""
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+    "name":"Candy Crush Cracker",
+    "version":"1.1",
+    "description":"Hack Candy Crush. Candy Crush Cracker gives you infinite lives, and beats levels for you when you're stuck!",
+    "manifest_version": 2,
+    "incognito": "spanning",
+    "icons": { 
+        "16": "images/icons/icon16.png",
+        "48": "images/icons/icon48.png",
+        "128": "images/icons/icon.png"
+    },
+    "content_scripts":[{
+        "all_frames": true,
+        "matches":[
+            "*://candycrush.king.com/*"
+        ],
+        "js": ["md5.js", "jquery-1.11.1.min.js", "jqueryUI/jquery-ui-1.11.2/jquery-ui.min.js", "CandyCrush.js", "candyCrushCracker.js"],
+        "css": ["jqueryUI/jquery-ui-1.11.2/jquery-ui-custom.css"],
+        "run_at":"document_start"
+    }],
+    "web_accessible_resources": [
+        "images/app/*",
+        "jqueryUI/jquery-ui-1.11.2/images/*"
+    ],
+    "page_action":{
+        "default_title": "Candy Crush Cracker"
+    },
+    "permissions": [
+        "identity",
+        "webRequest",
+        "webRequestBlocking",
+        "https://www.googleapis.com/",
+        "*://candycrush.king.com/*"
+    ],
+    "oauth2": {
+        "client_id": "897447759515-l5eiiq0qj212rab4ki72jvcqps8qmdba.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/chromewebstore.readonly"
+        ]
+    },
+    "background": {
+        "scripts": ["jquery-1.11.1.min.js", "CandyCrush.js", "background.js"]
+    }
+}
