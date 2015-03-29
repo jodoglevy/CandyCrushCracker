@@ -1,4 +1,4 @@
-# CandyCrushCracker
+# Candy Crush Cracker
 
 A Chrome extension to automatically complete levels for you, and to give you unlimitied lives, while playing Candy Crush on Facebook (https://apps.facebook.com/candycrush/).
 
