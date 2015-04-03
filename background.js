@@ -47,7 +47,8 @@ function verifyLicense(callback) {
 chrome.runtime.onMessage.addListener(
     function(request, sender, callback) {
         if(request.verifyLicense) {
-            verifyLicense(callback);
+            //verifyLicense(callback);
+            callback("FULL");
             return true;
         }
         if(request.getCurrentLevelData) {

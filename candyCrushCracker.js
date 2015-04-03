@@ -195,11 +195,11 @@ function showOtherCheats() {
             "Trivia Crack (Facebook)": function() {
                 window.open("https://chrome.google.com/webstore/detail/trivia-cracker/mpaoffaaolfohpleklnbmhbndphfgeef");
                 $(this).dialog("close");
-            },
-            "Trivia Crack (Android)": function() {
-                window.open("https://play.google.com/store/apps/details?id=com.apptastic.cheatsfortriviacrack");
-                $(this).dialog("close");
             }
+            // "Trivia Crack (Android)": function() {
+            //     window.open("https://play.google.com/store/apps/details?id=com.apptastic.cheatsfortriviacrack");
+            //     $(this).dialog("close");
+            // }
         }
     });
 }
@@ -230,15 +230,13 @@ function askUserToReview() {
 }
 
 function incrementPaidUses(licenseStatus) {
-    if(licenseStatus == "FULL") {
-        var paidUses = 1;
+    var paidUses = 1;
 
-        if(localStorage.paidUses) {
-            paidUses = parseInt(localStorage.paidUses) + 1;
-        }
-
-        localStorage.setItem("paidUses", ("" + paidUses));
+    if(localStorage.paidUses) {
+        paidUses = parseInt(localStorage.paidUses) + 1;
     }
+
+    localStorage.setItem("paidUses", ("" + paidUses));
 }
 
 document.addEventListener('DOMContentLoaded', function (evt) {
