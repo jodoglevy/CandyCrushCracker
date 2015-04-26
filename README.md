@@ -1,6 +1,6 @@
 # Candy Crush Cracker
 
-A Chrome extension to automatically complete levels for you, and to give you unlimitied lives & boosters, while playing Candy Crush on Facebook (https://apps.facebook.com/candycrush/).
+A Chrome extension to automatically complete levels for you, and to give you unlimitied lives & boosters, while playing Candy Crush on Facebook (https://apps.facebook.com/candycrush/). See it in action here: https://www.youtube.com/watch?v=GdEoZXQPxNE
 
 The extension has been removed from the Chrome Extension store, so it can only be installed from its source currently. See below for installation instructions.
 
