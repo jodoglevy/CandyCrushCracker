@@ -10,10 +10,10 @@ The JavaScript file used to integrate into the Candy Crush API (CandyCrush.js) w
 
   * On this page, click "Download Zip" to download Candy Crush Cracker
   * Unzip the downloaded zip file
-	* Open Google Chrome
-	* In Google Chrome go to the Extensions page. To do this, click the settings icon, then "More Tools", then "Extensions". Alternatively, you can go to chrome://extensions in the browser bar to get to this same page
-	* On the Extensions page, enable "Developer Mode"
-	* Click "Load Unpacked Extension"
-	* Select the folder you unzipped earlier, "CandyCrushCracker-master"
-	* Make sure Candy Crush Cracker has shown up on the Extensions page, and is marked enabled
-	* Go to https://apps.facebook.com/candycrush/ to start using Candy Crush Cracker
+  * Open Google Chrome
+  * In Google Chrome go to the Extensions page. To do this, click the settings icon, then "More Tools", then "Extensions". Alternatively, you can go to chrome://extensions in the browser bar to get to this same page
+  * On the Extensions page, enable "Developer Mode"
+  * Click "Load Unpacked Extension"
+  * Select the folder you unzipped earlier, "CandyCrushCracker-master"
+  * Make sure Candy Crush Cracker has shown up on the Extensions page, and is marked enabled
+  * Go to https://apps.facebook.com/candycrush/ to start using Candy Crush Cracker
