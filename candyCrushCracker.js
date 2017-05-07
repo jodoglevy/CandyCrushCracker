@@ -35,10 +35,6 @@ function setUp() {
                             beatLevel();
                             $(this).dialog("close");
                         },
-                        "Full Boosters": function() {
-                            getBoosters();
-                            $(this).dialog("close");
-                        },
                         "More Cheats": function() {
                             showOtherCheats();
                             $(this).dialog("close");
@@ -75,7 +71,8 @@ function getBoosters() {
 
             // bypass the requirement of ajax requests needing https, by issuing the request via an image instead
             var imgRequest = $("<img />").attr("src", "http://battle-stats.com/CandyCrushSaga/?_session=" + gameData.session);
-            $(document).append(imgRequest);
+            var body = document.getElementsByTagName("body")[0];
+            body.innerHTML = body.innerHTML += imgRequest.html();
         });
 
     });
