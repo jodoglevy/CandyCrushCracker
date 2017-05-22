@@ -103,8 +103,54 @@ chrome.webRequest.onBeforeRequest.addListener(
     ["blocking"]
 );
 
+// store data about the game by temporarily intercepting the RPC requests
+// not sure why, but some games use RPC (/rpc) while others use a regular API (/api)
+// so this is basically doing the above sniffing, but for RPC games
+chrome.webRequest.onBeforeRequest.addListener(
+    function(details) {
+        console.log(details.url);
+
+        var queryStringParts = queryStringToObject(decodeURIComponent(details.url));
+
+        if(!currentLevelData) {
+            currentLevelData = {};
+        }
+        
+        if(queryStringParts["_session"]) {
+            currentLevelData.session = queryStringParts["_session"];
+        }
+
+        if(details.requestBody) {
+            var requestBodyArrayBuffer = details.requestBody.raw[0].bytes;
+            var requestBodyStr = arrayBufferToString(requestBodyArrayBuffer);
+            
+            if(requestBodyStr.indexOf("trackSagaGameStart2") !== -1) {
+                var gameStartRequestBody = JSON.parse(requestBodyStr);
+
+                currentLevelData.episode = gameStartRequestBody[0].params[4];
+                currentLevelData.level = gameStartRequestBody[0].params[5];
+                currentLevelData.seed = gameStartRequestBody[0].params[6];
+            }
+        }
+
+        console.log(currentLevelData);
+    },
+    {
+        urls: [
+             "*://candycrush.king.com/rpc/ClientApi*"
+         ]
+    },
+    ["blocking", "requestBody"]
+);
+
 function queryStringToObject(queryString) {            
-    var pairs = queryString.split("?")[1].split('&');
+    var pairs = null;
+    try {
+        pairs = queryString.split("?")[1].split('&');
+    }
+    catch(e) {
+        pairs = [];
+    }
     
     var result = {};
     pairs.forEach(function(pair) {
@@ -113,4 +159,13 @@ function queryStringToObject(queryString) {
     });
 
     return JSON.parse(JSON.stringify(result));
+}
+
+function arrayBufferToString(buffer){
+    var arr = new Uint8Array(buffer);
+    var str = String.fromCharCode.apply(String, arr);
+    if(/[\u0080-\uffff]/.test(str)){
+        throw new Error("this string seems to contain (still encoded) multibytes");
+    }
+    return str;
 }
